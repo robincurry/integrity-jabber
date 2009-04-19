@@ -1,0 +1,17 @@
+h1. Install and Use
+
+<pre>
+sudo gem install hukl-integrity-jabber
+</pre>
+
+in config.ru add:
+
+<pre>
+require "notifier/jabber"
+Integrity::Notifier.register(Integrity::Notifier::Jabber)
+</pre>
+
+Now open the edit view of your integrity project and fill in the details for
+the jabber server. 
+
+*NOTE: If you have multiple receipients, use spaces as seperator.*
