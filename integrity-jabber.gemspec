@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = 'integrity-jabber'
-  s.version           = '1.0.3'
+  s.version           = '1.0.4'
   s.date              = '2009-04-19'
   s.summary           = 'Jabber notifier for the Integrity continuous integration server'
   s.description       = 'Easily let Integrity send jabber messages after each build'
