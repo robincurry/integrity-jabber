@@ -7,4 +7,4 @@
 - ["user", "pass", "host", "port"].each do |field|
   %p.normal
     %label{ :for => "jabber_notifier_#{field}" }= field.upcase
-    %input.text{ :name => "notifiers[Jabber][#{field}]", :id => "jabber_notifier_#{field}" :value => config["#{field}"], :type => "text", :value => config["#{field}"] }
+    %input.text{ :name => "notifiers[Jabber][#{field}]", :id => "jabber_notifier_#{field}", :type => "text", :value => config["#{field}"] }
