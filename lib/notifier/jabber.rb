@@ -13,7 +13,7 @@ module Integrity
       
       def initialize(build, config = {})
         host = config["host"].blank? ? nil  : config.delete("host")
-        post = config["port"].blank? ? 5222 : config.delete("port")
+        port = config["port"].blank? ? 5222 : config.delete("port")
         @server = ::Jabber::Simple.new(config.delete("user"), config.delete("pass"), nil, "Available", host, port)
         sleep 4
         @recipients = config["recipients"].nil? ? [] : config.delete("recipients").split(/\s+/) 
@@ -28,11 +28,10 @@ module Integrity
 
       def message
         @message ||= <<-content
-#{build.project.name}: #{short_message}  (#{commit.committed_at} by #{commit.author.name})
+#{commit.project.name}: #{short_message}  (#{commit.committed_at} by #{commit.author.name})
 Message: #{commit.message}
-Link: #{build_url}
+Link: #{commit_url}
 content
-        
       end
     end
   end
