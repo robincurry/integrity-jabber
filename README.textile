@@ -1,7 +1,10 @@
 h1. Install and Use
 
+integrity-jabber is now hosted on "gemcutter":http://gemcutter.org
 <pre>
-sudo gem install hukl-integrity-jabber
+sudo gem install gemcutter
+gem tumble
+sudo gem install integrity-jabber
 </pre>
 
 in config.ru add:
