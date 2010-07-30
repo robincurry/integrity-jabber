@@ -27,11 +27,11 @@ module Integrity
       end
 
       def message
-        @message ||= <<-content
-#{commit.project.name}: #{short_message}  (#{commit.committed_at} by #{commit.author.name})
-Message: #{commit.message}
-Link: #{commit_url}
-content
+        @message ||= <<-EOT
+#{build.project.name}: #{short_message}  (#{build.commit.committed_at} by #{build.commit.author.name})
+Message: #{build.commit.message}
+Link: #{build_url}
+EOT
       end
     end
   end
