@@ -13,6 +13,5 @@ Gem::Specification.new do |s|
                           lib/notifier/jabber.rb
                         )
 
-  s.add_dependency 'integrity'
   s.add_dependency 'jfcouture-xmpp4r-simple'
 end
